@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exBeerience</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn2.iconfinder.com/data/icons/harry-potter-colour-collection/60/32_-_Harry_Potter_-_Colour_-_Butterbeer-512.png"
+    />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <!--Import Google Icon Font-->
+
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#DEB887" />
+  </head>
+
+  <body>
+    <ons-navigator swipeable id="myNavigator" page="home.html"></ons-navigator>
+
+    <template id="home.html">
+      <ons-page id="home">
+        <ons-toolbar>
+          <div class="head center">exBeerience</div>
+        </ons-toolbar>
+        <ons-tabbar swipeable position="top">
+          <ons-tab
+            page="instructions.html"
+            label="Instructions"
+            icon="md-home"
+            active
+          >
+          </ons-tab>
+          <ons-tab
+            page="relax.html"
+            label="Relax"
+            icon="ion-navicon,material:md-mood"
+            active
+          >
+          </ons-tab>
+          <ons-tab
+            page="discover.html"
+            label="Discover"
+            icon="ion-navicon,material:md-mood"
+            active
+          >
+          </ons-tab>
+          <ons-tab
+            page="party.html"
+            label="Party"
+            icon="ion-navicon,material:md-mood"
+            active
+          >
+          </ons-tab>
+        </ons-tabbar>
+      </ons-page>
+    </template>
+
+    <template id="instructions.html">
+      <ons-page id="instructions">
+        <ons-toolbar>
+          <div class="left"></div>
+          <div class="center"></div>
+        </ons-toolbar>
+          <p>Getting shitfaced on a sunday afternoon.</p>
+      </ons-page>
+    </template>
+
+    <template id="relax.html">
+      <ons-page id="relax">
+        <ons-toolbar>
+          <div class="center"></div>
+        </ons-toolbar>
+          <p>Kona Brewing: Big Wave Golden Ale</p>
+      </ons-page>
+    </template>
+
+    <template id="discover.html">
+      <ons-page id="discover">
+        <ons-toolbar>
+          <div class="center"></div>
+        </ons-toolbar>
+          <p>Omnipollo: Quadruple Dry Hopped Fatamorgana</p>
+      </ons-page>
+    </template>
+
+    <template id="party.html">
+      <ons-page id="party">
+        <ons-toolbar>
+          <div class="center"></div>
+        </ons-toolbar>
+          <p>Åbro Original: Extra Stark</p>
+      </ons-page>
+    </template>
+  </body>
+</html>
