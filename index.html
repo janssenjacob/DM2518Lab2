@@ -1,127 +1,171 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Foodourites</title>
+	<title>Foodourites</title>
 
-    <link rel="stylesheet" type="text/css" href="styling.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie Flower"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme"/>
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+	<link rel="stylesheet" type="text/css" href="styling.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie Flower" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme" />
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
 
-    <!-- <script src="react.js"></script>
+	<!-- <script src="react.js"></script>
     <script src="react-dom.js"></script>
     <script src="onsenui.js"></script>
     <script src="react-onsenui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script> -->
 
-    <meta name="viewport" content="initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#DEB887" />
+	<meta name="viewport" content="initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="theme-color" content="#DEB887" />
 </head>
 
 <body>
-    <ons-navigator swipeable id="myNavigator" page="home.html"></ons-navigator>
+	<ons-navigator swipeable id="myNavigator" page="home.html"></ons-navigator>
 
-    <template id="home.html">
-        <ons-page id="home">
-            <ons-toolbar>
-                <div class="center" style="text-align: center; font-family: 'Acme';font-size: 22px !important;">Foodourites</div>
-            </ons-toolbar>
-            <ons-tabbar swipeable position="top">
-                <ons-tab page="shoppingList.html" label="Shoplist" active></ons-tab>
-                <ons-tab page="recipes.html" label="Recipes"></ons-tab>
-                <ons-tab page="explore.html" label="Explore"></ons-tab>
-            </ons-tabbar>
-        </ons-page>
+	<template id="home.html">
+		<ons-page id="home">
+			<ons-toolbar>
+				<div class="center" style="text-align: center;font-size: 40px !important; background-color: #ffbe85;">
+					Foodourites
+				</div>
+			</ons-toolbar>
+			<ons-tabbar swipeable position="top">
+				<ons-tab page="shoppingList.html" label="Shoplist" active></ons-tab>
+				<ons-tab page="recipes.html" label="Recipes"></ons-tab>
+				<ons-tab page="explore.html" label="Explore"></ons-tab>
+			</ons-tabbar>
+		</ons-page>
 
-    </template>
+	</template>
 
-    <template id="shoppingList.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="center"></div>
-            </ons-toolbar>
-            <ons-input type="text" id="myInput" placeholder="New item"></ons-input>
-            <ons-button id="addBtn" onclick="newElement()">Add</ons-button>
-            <ons-list id="myList">
-            </ons-list>
-        </ons-page>
-    </template>
+	<template id="shoppingList.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="center"></div>
+			</ons-toolbar>
+			<ons-input type="text" id="myInput" placeholder="New item"></ons-input>
+			<ons-button id="addBtn" onclick="newElement()">Add</ons-button>
+			<ons-list id="myList">
+			</ons-list>
+		</ons-page>
+	</template>
 
-    <template id="recipes.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="center"></div>
-              </ons-toolbar>
-              <ons-list>
-      <ons-list-item onclick="showPage('pitePalt.html')" modifier="chevron" tappable>
-        Pitepalt
-      </ons-list-item>
-      <ons-list-item onclick="showPage('chinaFood.html')" modifier="chevron" tappable>
-        Jacob´s China Food
-      </ons-list-item>
-      <ons-list-item onclick="showPage('specialty.html')" modifier="chevron" tappable>
-        Anna´s Specialty
-      </ons-list-item>
-    </ons-list>
-        </ons-page>
-    </template>
+	<template id="recipes.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="center"></div>
+			</ons-toolbar>
+			<ons-list>
+				<ons-list-item onclick="showPage('pitePalt.html')" modifier="chevron" tappable>
+					Pitepalt
+				</ons-list-item>
+				<ons-list-item onclick="showPage('chinaFood.html')" modifier="chevron" tappable>
+					Jacob´s China Food
+				</ons-list-item>
+				<ons-list-item onclick="showPage('specialty.html')" modifier="chevron" tappable>
+					Anna´s Specialty
+				</ons-list-item>
+			</ons-list>
+		</ons-page>
+	</template>
 
-    <template id="explore.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="center"></div>
-              </ons-toolbar>
-            <ons-list id="myNewList">
-            <ons-list-item class="checked">hej</ons-list-item>
-            </ons-list>
-        </ons-page>
-    </template>
+	<template id="explore.html">
+		<ons-page>
+			<ons-toolbar>
+				<div class="center"></div>
+			</ons-toolbar>
+			<ons-list id="myNewList">
+				<ons-list-item class="checked">hej</ons-list-item>
+			</ons-list>
+		</ons-page>
+	</template>
 
-    <ons-template id="pitePalt.html">
-  <ons-page id="pitePalt">
-    <ons-toolbar>
-      <div class="left"><ons-back-button>Menu</ons-back-button></div>
-      <div class="center">Pitepalt</div>
-    </ons-toolbar>
-    <div class="page-content">
-      <h1>Pitepalt is a traditional dish from the swedish north made of potatoes.</h1>
-      <p>It is preferably eaten with bacon, lingonberry jam, and loads of Bregott.</p>
-      <ons-card>
-      <img src="images/600px-Pitepalt.jpg" alt="Pitepalt">
-      </ons-card>
-    </div>
-  </ons-page>
-</ons-template>
+	<ons-template id="pitePalt.html">
+		<ons-page id="pitePalt">
+			<ons-toolbar>
+				<div class="left">
+					<ons-back-button>Menu</ons-back-button>
+				</div>
+				<div class="center">Pitepalt</div>
+			</ons-toolbar>
+			<div class="page-content">
+				<ons-card>
+					<h1>Pitepalt is a traditional dish from the swedish north made of potatoes.</h1>
+					<p>It is preferably eaten with bacon, lingonberry jam, and loads of Bregott.</p>
+				</ons-card>
+				<ons-card>
+					<img src="images/600px-Pitepalt.jpg" alt="Pitepalt">
+				</ons-card>
+				<ons-card>
+					<h1>Ingridients</h1>
+					<ul>
+						<li>1 kg Potatoes</li>
+						<li>1 dl Barley Flour</li>
+						<li>2 dl Flour</li>
+						<li>1 1/2 tsp Salt</li>
+					</ul>
+					<h1>Directions</h1>
+					<ul>
+						<li>Peel and grate the potatoes nicely. Allow to drain properly in a strainer or colander and squeeze out the liquid. Cut the pork into small cubes.</li>
+						<li>Mix the potatoes with the barley and wheat flour and salt, start with a smaller amount of flour and add more if needed. The amount of flour depends on the type of potato used. The dough should be fairly firm.
+							Cut the dough into 12 pieces (for 4 port). Do a recess in each. Add about 1 tablespoon of pork cubes, pinch together and shape into round balls.</li>
+						<li>Boil lightly salted water in a large saucepan.
+							Carefully place in half of the columns (for 4 gates) using a hole spoon and gently stir so that they do not stick to the bottom. Simmer for 45-60 minutes.</li>
+						<li>Record with hollow spoon and hot hold. Prepare the rest. Serve with lingonberry jam and some butter to melt on the palette.</li>
+					</ul>
+				</ons-card>
+			</div>
+		</ons-page>
+	</ons-template>
 
-<ons-template id="chinaFood.html">
-  <ons-page id="chinaFood">
-    <ons-toolbar>
-      <div class="left"><ons-back-button>Menu</ons-back-button></div>
-      <div class="center">Jacob´s China Food</div>
-    </ons-toolbar>
-    <div class="page-content">
-     <p>Overview of JS frameworks</p>
-    </div>
-  </ons-page>
-</ons-template>
+	<ons-template id="chinaFood.html">
+		<ons-page id="chinaFood">
+			<ons-toolbar>
+				<div class="left">
+					<ons-back-button>Menu</ons-back-button>
+				</div>
+				<div class="center">Jacob´s China Food</div>
+			</ons-toolbar>
+			<div class="page-content">
+				<ons-card>
+				<h1>Vary as you wish, but don't forget to always double up on chili and garlic.</h1>
+				<img src="images/wok-dish.jpg">
+				<h1>Ingridients</h1>
+				<ul>
+					<li>2 Carrots</li>
+					<li>1 Red Bell Pepper</li>
+					<li>125g Scallions</li>
+					<li>4 port Rice Noodles</li>
+					<li>2 tablespoons oil</li>
+					<li>3 Garlic Cloves</li>
+					<li>180g Bean Sprouts</li>
+					<li>Salt, Pepper, and soy</li>
+				</ul>
+				</ons-card>
+			</div>
+		</ons-page>
+	</ons-template>
 
-<ons-template id="specialty.html">
-  <ons-page id="specialty">
-    <ons-toolbar>
-      <div class="left"><ons-back-button>Menu</ons-back-button></div>
-      <div class="center">Anna´s specialty</div>
-    </ons-toolbar>
-    <div class="page-content">
-      <p>Vad är annas special?</p>
-    </div>
-  </ons-page>
-</ons-template>
+	<ons-template id="specialty.html">
+		<ons-page id="specialty">
+			<ons-toolbar>
+				<div class="left">
+					<ons-back-button>Menu</ons-back-button>
+				</div>
+				<div class="center">Anna´s specialty</div>
+			</ons-toolbar>
+			<div class="page-content">
+				<p>Vad är annas special?</p>
+			</div>
+		</ons-page>
+	</ons-template>
 
-<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-<script type="text/javascript" src="app.js"></script>
+	<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>
