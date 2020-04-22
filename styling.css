@@ -3,6 +3,10 @@
     font-size: 22px;
     font-size: '30px';
 }
+ons-icon {
+  font-family: 'Font Awesome\ 5 Free' !important;
+  font-weight: 900;
+}
 ons-input input {
     font-size: 22px !important;
 }
