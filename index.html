@@ -24,7 +24,7 @@
 </head>
 
 <body>
-	<ons-navigator swipeable id="myNavigator" page="home.html"></ons-navigator>
+	<!-- <ons-navigator swipeable id="myNavigator" page="home.html"></ons-navigator> -->
 	
 	<ons-splitter>
 		<ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
@@ -44,15 +44,20 @@
 
 	<template id="home.html">
 		<ons-page id="home">
-			<ons-toolbar>
+			<ons-toolbar style="background-color: #ffbe85;">
 				<div class="left">
 					<ons-toolbar-button onclick="fn.open()">
+					  <ons-icon icon="md-menu">Menu</ons-icon>
+					</ons-toolbar-button>
+				  </div>
+				<div class="center" style="text-align: center;font-size: 35px !important;">
+					Foodourites
+				</div>
+				<div class="right">
+					<ons-toolbar-button onclick="showTemplateDialog()">
 					  <ons-icon icon="md-menu"></ons-icon>
 					</ons-toolbar-button>
 				  </div>
-				<div class="center" style="text-align: center;font-size: 40px !important; background-color: #ffbe85;">
-					Foodourites
-				</div>
 			</ons-toolbar>
 			<ons-tabbar swipeable position="top">
 				<ons-tab page="shoppingList.html" label="Shoplist" active></ons-tab>
@@ -61,6 +66,20 @@
 			</ons-tabbar>
 		</ons-page>
 	</template>
+
+	<template id="dialog.html">
+		<ons-dialog id="my-dialog">
+		  <div style="text-align: center; padding: 10px;">
+			<p>
+			  Dummy dialog
+			</p>
+	  
+			<p>
+			  <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
+			</p>
+		  </div>
+		</ons-dialog>
+	  </template>
 
 	<template id="about.html">
 		<ons-page>
@@ -115,7 +134,9 @@
 				<div class="center"></div>
 			</ons-toolbar>
 			<ons-list id="myNewList">
-				<ons-list-item class="checked">hej</ons-list-item>
+				<ons-list-item>
+					<div>Stay tuned!</div>
+				</ons-list-item>
 			</ons-list>
 		</ons-page>
 	</template>
